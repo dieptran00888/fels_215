@@ -1,22 +1,21 @@
-<%= form_tag words_path, method: :get, remote: true do %>
-  <div class="col-md-12 col-md-offset-3 filter-words">
-    <div class="col-md-12 filter">
+<div class="filter-word">
+  <%= form_tag words_path, method: :get, remote: true do %>
+    <div class="col-md-2">
+      <%= select_tag :category_id,
+        options_for_select(@categories, :category_id),
+        include_blank: t(".all_categories"), class: "form-control" %>
+    </div>
+    <% Settings.option.each do |key, value| %>
       <div class="col-md-2">
-        <%= select_tag :category_id,
-          options_for_select(@categories, :category_id),
-          include_blank: t(".all_categories"), class: "form-control" %>
-      </div>
-      <% Settings.option.each do |key,value| %>
-        <div class="col-md-1">
-          <div class="col-md-2 radio">
-            <%= radio_button_tag :option, value,
-              checked = (params[:option] == value || params[:option].blank?) %>
-            <div class="radio_fix"><%= value %></div>
-          </div>
+        <div class="col-md-2 radio">
+          <%= radio_button_tag :option, value,
+            checked = (params[:option] == value || params[:option].blank?) %>
+          <div class="radio_fix"><%= value %></div>
         </div>
-      <% end %>
-    <div class="col-md-6 search-text">
+      </div>
+    <% end %>
+    <div class="col-md-4">
       <%= submit_tag yield(:button_text), class: "btn btn-primary btn-search" %>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

@@ -11,6 +11,12 @@
     <%= render "follow_form" if logged_in? %>
   </aside>
   <div class="col-md-9">
+    <div class="content btn-at-home">
+      <%= link_to t(".words"), words_path,
+        class: "col-md-5 btn btn-success btn-lg" %>
+      <%= link_to t(".categories"), categories_path,
+        class: "col-md-5 col-md-offset-2 btn btn-success btn-lg" %>
+    </div>
     <div class="panel panel-default content">
       <div class="panel-heading">
         <%= t ".activities" %>

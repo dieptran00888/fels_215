@@ -155,8 +155,6 @@ en:
   categories:
     search_form:
       search_categories: "Enter category"
-    admin:
-      words:
   users:
     new:
       create: "Create my acount"
@@ -171,6 +169,9 @@ en:
       follow: "Follow"
     unfollow:
       unfollow: "Unfollow"
+    show:
+      words: "Words"
+      categories: "Categories"
   sessions:
     new:
       login: "Login"

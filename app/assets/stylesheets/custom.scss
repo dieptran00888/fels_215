@@ -262,10 +262,6 @@ input, select, .uneditable-input {
   margin-top: 20px;
 }
 
-.filter {
-  margin-top: 2%;
-}
-
 body {
   background-color: #e9ebee;
 }
@@ -287,5 +283,14 @@ body {
 }
 .list-category {
   margin-top: 12%;
+  text-align: center;
+}
+
+.btn-at-home {
+  margin-bottom: 10%;
+}
+
+.filter-word{
+  margin-top: 2%;
   text-align: center;
 }
