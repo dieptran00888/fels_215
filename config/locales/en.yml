@@ -45,6 +45,7 @@ en:
   all_users: "All Users"
   home: "Home"
   logout: "Log out"
+  cannot_create_lesson: "Not enough word to create lesson!"
 
   layouts:
     header:

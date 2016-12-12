@@ -17,13 +17,19 @@ class LessonsController < ApplicationController
 
   def create
     @lesson = current_user.lessons.build category: @category
-    if @lesson.save
-      respond_to do |format|
-        format.js
+    if @lesson.category.words.count >= @lesson.category.word_per_lesson
+      if @lesson.save
+        respond_to do |format|
+          format.js
+        end
+      else
+        render :new
       end
     else
-      render :new
+      flash[:danger] = t "cannot_create_lesson"
+      redirect_to category_lessons_path
     end
+
   end
 
   def update
