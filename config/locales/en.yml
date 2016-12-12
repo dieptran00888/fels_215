@@ -122,6 +122,7 @@ en:
       date: "%Y-%m-%d"
     index:
       create_lesson: "Create lesson"
+      list_lessons: "List lessons"
     show:
       button_finish: "Finish"
       progress: "Progress"

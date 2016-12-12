@@ -9,7 +9,7 @@
     <%= hidden_field :duration, "lesson",
       value: (@lesson.finish_time - Time.now).to_i %>
   <% end %>
-  <%= form_for @lesson do |f| %>
+  <%= form_for @lesson do |f, index| %>
     <div class="result-list">
       <%= f.fields_for :results do |builder| %>
         <%= render "result", f: builder %>

@@ -1,9 +1,8 @@
 <div class="container">
-  <div class="col-md-5">
+  <div class="col-md-5 btn-create-lesson">
     <div class="col-md-6">
       <%= form_for :lesson, remote: true  do |f| %>
         <%= render "shared/error_messages", object: @lesson %>
-        <%= f.label :lesson %>
         <%= f.submit t(".create_lesson"),
           class: "btn btn-primary" %>
       <% end %>
@@ -11,8 +10,8 @@
   </div>
 </div>
 <div class="container">
-  <table class="table table-striped tbl-categories">
-    <h4><%= t ".list_lessons" %></h4>
+  <h3 class="list-lessons"><%= t ".list_lessons" %></h3>
+  <table class="table table-striped tbl-lessons">
     <thead>
       <tr>
         <th><%= t ".created_at" %></th>

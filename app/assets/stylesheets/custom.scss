@@ -99,8 +99,11 @@ input, select, .uneditable-input {
   padding-left: 20px;
 }
 
-.tbl-categories td {
-  width: 25%;
+.tbl-categories {
+  margin-top: 5%;
+  h3 {
+    text-align: center;
+  }
 }
 
 .tbl-categories tr th, td {
@@ -194,6 +197,7 @@ input, select, .uneditable-input {
 
 .users {
   margin-top: 20px;
+  list-style: none;
 }
 
 .user-item-detail {
@@ -258,7 +262,30 @@ input, select, .uneditable-input {
   margin-top: 20px;
 }
 
+.filter {
+  margin-top: 2%;
+}
+
 body {
   background-color: #e9ebee;
 }
 
+.all-categories {
+  margin-top: 2%;
+}
+
+.btn-create-lesson {
+  margin-top: 2%;
+}
+
+.list-lessons {
+  text-align: center;
+}
+
+.tbl-lessons {
+  margin-top: 5%
+}
+.list-category {
+  margin-top: 12%;
+  text-align: center;
+}
