@@ -15,12 +15,9 @@ class Admin::CategoriesController < ApplicationController
 
   def create
     @category = Category.new category_params
-    if @category.save
-      respond_to do |format|
-        format.js
-      end
-    else
-      render :new
+    @category.save
+    respond_to do |format|
+      format.js
     end
   end
 

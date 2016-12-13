@@ -7,7 +7,7 @@ class Word < ApplicationRecord
   accepts_nested_attributes_for :answers, allow_destroy: true,
     reject_if: lambda {|attributes| attributes[:content].blank?}
 
-  validates :content, presence: true
+  validates :content, presence: true, length: {maximum: 10}
   validate :valid_answer_numbers
   validate :check_correct_answer
 

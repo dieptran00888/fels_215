@@ -5,7 +5,11 @@
   <div class="item-content">
     <% f.object.word.answers.each do |answer| %>
       <label>
-        <%= f.radio_button :answer_id, answer.id %>
+        <% if f.object.lesson.finished? %>
+          <%= f.radio_button :answer_id, answer.id, disabled: "disabled" %>
+        <% else %>
+          <%= f.radio_button :answer_id, answer.id %>
+        <% end %>
         <%= answer.content %>
         <%= correct_answer f.object, answer %>
       </label>

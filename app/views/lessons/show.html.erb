@@ -17,5 +17,9 @@
     </div>
     <%= f.submit t(".button_finish"),
       class: "btn btn-primary finish-lesson" unless @lesson.finished? %>
+    <% if @lesson.finished? %>
+      <%= link_to "Back", category_lessons_path,
+        class: "btn btn-primary btn-back" %>
+    <% end %>
   <% end %>
 </div>

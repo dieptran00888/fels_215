@@ -1,6 +1,5 @@
 <% if @word.errors.any? %>
-  $("#div-error-messages").html(
-    "<%= j render("shared/error_messages", object: @word) %>");
+  alert("Something wrong with input value! Try again!");
 <% else %>
   $('#div-words').prepend("<%= j render @word %>");
   $('input[type=text]').val("");

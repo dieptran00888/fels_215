@@ -42,7 +42,7 @@ module LessonsHelper
   end
 
   def score_field lesson
-    if lesson.finished?
+    if lesson.present? && lesson.finished?
       "#{lesson.score}/#{lesson.category.word_per_lesson}"
     else
       "-/-"

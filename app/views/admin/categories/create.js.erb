@@ -1,2 +1,6 @@
-$('.list-category').prepend(" <%= j render @category %>");
-$('input').val("");
+<% if @category.errors.any? %>
+  alert("Something wrong with input value! Try again!");
+<% else %>
+  $('.list-category').prepend(" <%= j render @category %>");
+  $('input').val("");
+<% end %>
