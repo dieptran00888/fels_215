@@ -1,0 +1,13 @@
+<% lessons.each do |f| %>
+  <tr>
+    <td><%= f.user.name %></td>
+    <td><%= l f.created_at, format: :short %></td>
+    <td><%= f.category.name %></td>
+    <td><%= status_field f %></td>
+    <td><%= f.category.duration %></td>
+    <td><%= f.category.word_per_lesson %></td>
+    <td><%= spent_time_field f %></td>
+    <td><%= score_field f %></td>
+    <td><%= action_button f %></td>
+</tr>
+<% end %>

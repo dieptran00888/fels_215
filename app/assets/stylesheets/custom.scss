@@ -220,7 +220,7 @@ input, select, .uneditable-input {
 
 .user-profile {
   text-align: center;
-  margin-top: 21px;
+  margin-top: 38px;
   padding: 15px;
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid rgba(192, 192, 192, 0.61);
@@ -247,7 +247,7 @@ input, select, .uneditable-input {
 }
 
 .side-menu {
-  margin-top: 20px;
+  margin-top: 15%;
   li {
     width: 100%;
     border: 1px solid #e0e0e0;
@@ -255,7 +255,7 @@ input, select, .uneditable-input {
 }
 
 .content {
-  margin-top: 21px;
+  margin-top: 38px;
 }
 
 .show-category {
@@ -287,10 +287,18 @@ body {
 }
 
 .btn-at-home {
-  margin-bottom: 10%;
+  margin-bottom: 12%;
 }
 
 .filter-word{
   margin-top: 2%;
   text-align: center;
+}
+
+.list-categories-admin {
+  margin-top: 5%;
+}
+
+.admin-categories {
+  margin-top: 2%;
 }
