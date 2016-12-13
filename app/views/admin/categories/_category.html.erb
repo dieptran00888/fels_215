@@ -3,7 +3,7 @@
   <td><%= category.duration %></td>
   <td><%= category.word_per_lesson %></td>
   <td><%= link_to t("edit"),
-    edit_admin_category_path(category.id), id: "edit-category" %>
+    edit_admin_category_path(category.id), id: "edit-category" %> |
     <%= link_to t("delete"),[:admin, category], remote: true,
       id: "delete-category", method: :delete, data: {confirm: t("delete_success")} %>
   </td>

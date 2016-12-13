@@ -46,6 +46,8 @@ en:
   home: "Home"
   logout: "Log out"
   cannot_create_lesson: "Not enough word to create lesson!"
+  login: "Log in"
+  signup: "Sign up"
 
   layouts:
     header:
@@ -63,6 +65,8 @@ en:
       categories: "Categories"
     guess_header:
       categories: "Categories"
+      users: "Users"
+
     user_header:
       users: "Users"
       categories: "Categories"

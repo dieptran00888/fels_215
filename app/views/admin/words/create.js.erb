@@ -3,5 +3,6 @@
     "<%= j render("shared/error_messages", object: @word) %>");
 <% else %>
   $('#div-words').prepend("<%= j render @word %>");
-  $('input').val("");
+  $('input[type=text]').val("");
+  $('input[type=checkbox]').attr('checked', false);
 <% end %>
