@@ -3,6 +3,6 @@ class Admin::DashboardController < ApplicationController
   before_action :verify_admin
 
   def index
-    @lessons = Lesson.all
+    @lessons = Lesson.all.order_desc
   end
 end

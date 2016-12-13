@@ -38,7 +38,7 @@ module ActivitiesHelper
   def score_message activity
     if activity.finished_lesson?
       t("helpers.activities_helper.activity_score_message")+
-        +score_field(@lesson)
+        score_field(@lesson)
     end
   end
 end

@@ -1,9 +1,11 @@
 class CategoriesController < ApplicationController
   before_action :logged_in_user
   before_action :find_category, only: :show
+  include CategoryUtils
 
   def index
     @categories = Category.search(params[:search]).sort
+    words_count
   end
 
   def show

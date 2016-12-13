@@ -26,6 +26,12 @@ class Word < ApplicationRecord
     FROM lessons l join results r
     on l.id = r.lesson_id join answers a on r.word_id = a.word_id
     where l.user_id = ? AND a.is_correct = ?)", user_id, true}
+
+  scope :learned_words, ->(user_id, category_id){
+    where "words.id in (SELECT r.word_id FROM results r join lessons l
+    on r.lesson_id = l.id WHERE l.user_id = ? AND l.category_id = ?)",
+      user_id, category_id}
+
   scope :not_learned, ->  user_id {where "words.id not in (SELECT r. word_id
     FROM lessons l join results r
     on l.id = r.lesson_id join answers a on r.word_id = a.word_id

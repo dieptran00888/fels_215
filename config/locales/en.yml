@@ -61,6 +61,7 @@ en:
         word: "Words"
         category: "Categories"
     admin_header:
+      words: "Words"
       users: "Users"
       categories: "Categories"
     guess_header:
@@ -174,8 +175,8 @@ en:
     unfollow:
       unfollow: "Unfollow"
     show:
-      words: "Words"
-      categories: "Categories"
+      words: "Word List"
+      categories: "Start Lesson"
   sessions:
     new:
       login: "Login"

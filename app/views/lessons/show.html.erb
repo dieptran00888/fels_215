@@ -18,8 +18,13 @@
     <%= f.submit t(".button_finish"),
       class: "btn btn-primary finish-lesson" unless @lesson.finished? %>
     <% if @lesson.finished? %>
-      <%= link_to "Back", category_lessons_path,
-        class: "btn btn-primary btn-back" %>
+      <% if current_user.is_admin? %>
+        <%= link_to "Back", admin_home_path,
+          class: "btn btn-primary btn-back" %>
+      <% else %>
+        <%= link_to "Back", category_lessons_path,
+          class: "btn btn-primary btn-back" %>
+      <% end %>
     <% end %>
   <% end %>
 </div>

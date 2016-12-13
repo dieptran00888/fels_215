@@ -22,7 +22,8 @@
         <%= t ".activities" %>
       </div>
       <div class="panel-body">
-        <% if @user.activities.any? && current_user.following?(@user)%>
+        <% if @user.activities.any? && 
+          (current_user.following?(@user)||@user.current_user?(@user)) %>
           <%= render @user.activities.order_by_created %>
         <% end %>
       </div>

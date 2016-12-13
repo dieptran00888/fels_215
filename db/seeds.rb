@@ -8,6 +8,6 @@
 
 User.create! name: "Admin",
   email: "admin@admin.com",
-  password: "111111",
-  password_confirmation: "111111",
+  password: "123456",
+  password_confirmation: "123456",
   is_admin: true
